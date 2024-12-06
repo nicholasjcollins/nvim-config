@@ -22,4 +22,7 @@ require('lazy').setup {
   require 'plugins.lsp',
   require 'plugins.autocomplete',
   require 'plugins.none-ls',
+  require 'plugins.kb',
+  require 'plugins.dadbod',
+  require 'plugins.dadbod-auth',
 }
