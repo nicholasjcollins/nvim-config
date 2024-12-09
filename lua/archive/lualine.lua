@@ -1,4 +1,4 @@
-return {
+--[[ return {
   'nvim-lualine/lualine.nvim',
   config = function()
     local mode = {
@@ -70,3 +70,4 @@ return {
     }
   end,
 }
+]]

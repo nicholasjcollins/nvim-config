@@ -13,6 +13,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup {
+  spec = {
+    { import = 'plugins' },
+  },
+  --[[
   require 'plugins.neotree',
   require 'plugins.colorscheme',
   require 'plugins.bufferline',
@@ -22,7 +26,9 @@ require('lazy').setup {
   require 'plugins.lsp',
   require 'plugins.autocomplete',
   require 'plugins.none-ls',
+  require 'plugins.zen-mode',
   require 'plugins.kb',
   require 'plugins.dadbod',
   require 'plugins.dadbod-auth',
+]]
 }
