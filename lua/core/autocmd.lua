@@ -14,3 +14,11 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.linebreak = true
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'dbout',
+  callback = function()
+    vim.wo.foldenable = false -- Disable folding
+    vim.wo.foldmethod = 'manual' -- Ensure no automatic folding
+  end,
+})
