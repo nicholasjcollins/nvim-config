@@ -4,6 +4,11 @@ vim.g.maplocalleader = ' '
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 local opts = { noremap = true, silent = true }
 
+-- Execute Lua Code
+vim.keymap.set('n', '<leader><leader>x', '<cmd>source %<CR>')
+vim.keymap.set('n', '<leader>x', ':.lua<CR>')
+vim.keymap.set('v', '<leader>x', ':lua<CR>')
+
 vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts) -- save
 vim.keymap.set('n', 'x', '"_x', opts) -- stop x from overwriting register
 vim.keymap.set('v', 'p', '_dP', opts) -- stop x from overwriting register
@@ -13,9 +18,9 @@ vim.keymap.set('n', 'n', 'nzzzv', opts)
 vim.keymap.set('n', 'N', 'Nzzzv', opts)
 
 -- split resizing
-vim.keymap.set('n', '<S-Up>',    ':resize -2<CR>', opts)
-vim.keymap.set('n', '<S-Down>',  ':resize +2<CR>', opts)
-vim.keymap.set('n', '<S-Left>',  ':vertical resize -2<CR>', opts)
+vim.keymap.set('n', '<S-Up>', ':resize -2<CR>', opts)
+vim.keymap.set('n', '<S-Down>', ':resize +2<CR>', opts)
+vim.keymap.set('n', '<S-Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<S-Right>', ':vertical resize +2<CR>', opts)
 
 -- buffer navigation
