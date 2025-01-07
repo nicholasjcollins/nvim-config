@@ -72,7 +72,7 @@ return {
       builtin.live_grep { cwd = vim.fn.stdpath 'config' }
     end)
     -- Notes Directory
-    local notes_path = '~/Developer/00 - 09 System/00 System Administration/00.00 Index/'
+    local notes_path = '~/Notes'
     vim.keymap.set('n', '<leader>sn', function()
       builtin.find_files { cwd = notes_path }
     end)
