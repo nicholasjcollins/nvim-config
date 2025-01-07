@@ -20,7 +20,11 @@ return {
             ['<C-j>'] = require('telescope.actions').move_selection_next, -- move to next result
             ['<C-Down>'] = require('telescope.actions').move_selection_next, -- move to next result
             ['<C-l>'] = require('telescope.actions').select_default, -- open file
+            ['<C-d>'] = require('telescope.actions').delete_buffer,
           },
+        n = { 
+            ['<C-d>'] = require('telescope.actions').delete_buffer,
+         },
         },
       },
       pickers = {
@@ -72,7 +76,7 @@ return {
       builtin.live_grep { cwd = vim.fn.stdpath 'config' }
     end)
     -- Notes Directory
-    local notes_path = '~/Developer/00 - 09 System/00 System Administration/00.00 Index/'
+    local notes_path = '~/Notes'
     vim.keymap.set('n', '<leader>sn', function()
       builtin.find_files { cwd = notes_path }
     end)
