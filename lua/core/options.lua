@@ -30,3 +30,4 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.schedule(function() 
     vim.o.clipboard = 'unnamedplus' 
 end) -- sync neovim register with system clipboard
+vim.opt.conceallevel = 1
